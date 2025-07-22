@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const start = async () => {
 	const video = document.createElement("video");
 	video.setAttribute("src, "./St. Joseph's University Bangalore.mp4"");
-	vide.set Attribute("loop", "");
+	video.set Attribute("loop", "");
 
 	video.oncanplay = () => {
-		video.play();
+		anchor.onTargetFound = () => {
+			video.play();
+		}	
+		anchor.onTargetLost = () => {
+			video.pause();
+		}
 	}
 	const mindarThree = new window.MINDAR.IMAGE.MindARThree({
 	container: document.body,
@@ -16,7 +21,7 @@ const start = async () => {
 
 const {renderer, scene, camera} = mindThree;
 
-const geometry = new THREE.PLaneGeometry(1, 1);
+const geometry = new THREE.PlaneGeometry(1, 1);
 const videoTexture = new THREE.VideoTexture(video);
 const material = new THREE.MeshBasicMaterial({map: videoTexture, side: THREE.FrontSide, toneMapped: false});
 const plane = new THREE.Mesh(geometry,material);
