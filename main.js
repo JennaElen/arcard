@@ -41,8 +41,3 @@ renderer.setAnimationLoop( () => {
 start();
 
 });
-}
-
-start();
-
-});
