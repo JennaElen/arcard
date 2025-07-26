@@ -16,7 +16,7 @@ const start = async () => {
 	}
 	const mindarThree = new window.MINDAR.IMAGE.MindARThree({
 	container: document.body,
-	imageTargetSRC: './targets.mind'
+	imageTargetSrc: './targets.mind'
 });
 
 const {renderer, scene, camera} = mindarThree;
